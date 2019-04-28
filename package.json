@@ -1,0 +1,33 @@
+{
+  "name": "cms-server",
+  "version": "1.0.0",
+  "description": "Content Management System with MEVN",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server",
+    "app": "concurrently \"nodemon server\" \"npm run serve --prefix ../CMS-Client/vue\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nd2k/CMS-Server.git"
+  },
+  "author": "nd2k",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nd2k/CMS-Server/issues"
+  },
+  "homepage": "https://github.com/nd2k/CMS-Server#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.4",
+    "morgan": "^1.9.1",
+    "node": "^11.11.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
+  }
+}

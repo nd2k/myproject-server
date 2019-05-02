@@ -89,8 +89,9 @@ exports.login = (req, res) => {
       if (isMatch) {
         //Login user matches user in DB
         const matchedUser = {
-          id: user.id,
           email: user.email,
+          firstname: user.firstname,
+          lastname: user.lastname,
           avatar: user.avatar
         };
 
@@ -108,7 +109,8 @@ exports.login = (req, res) => {
             }
             res.status(200).json({
               message: "Token created",
-              object: "Bearer " + token
+              token: "Bearer " + token,
+              object: matchedUser
             });
           }
         );
